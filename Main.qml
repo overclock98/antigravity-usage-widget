@@ -144,17 +144,7 @@ Item {
   }
 
   function updateCommand(kind, agentIds) {
-    var command = ["omarchy-agent-usage-update"]
-    if (kind === "force") command.push("--force")
-    if (kind === "limits") command.push("--limits-only")
-    var providers = settings && settings.providers ? settings.providers : {}
-    for (var id in providers) {
-      if (providers[id] && providers[id].enabled === false) command.push("--except", id)
-    }
-    if (agentIds) {
-      for (var i = 0; i < agentIds.length; i++) command.push(agentIds[i])
-    }
-    return command
+    return ["bash", root.pluginPath + "/sidecar/sync.sh"]
   }
 
   function runUpdate(kind, agentIds) {
