@@ -294,6 +294,9 @@ Panel {
     }
     candidates.push(Qt.resolvedUrl("assets/" + p.providerId + ".svg"))
     candidates.push(Qt.resolvedUrl("assets/" + p.providerId + ".png"))
+    if (String(p.providerId).startsWith("antigravity")) {
+      candidates.push(Qt.resolvedUrl("assets/antigravity.png"))
+    }
     return candidates
   }
 
