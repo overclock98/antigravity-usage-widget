@@ -1,5 +1,7 @@
 # Antigravity Usage Widget for Omarchy
 
+![Preview](assets/screenshot.png)
+
 This is a custom Omarchy Shell plugin that pulls your live Antigravity API quotas directly from Google and displays them in a beautiful, compact dropdown menu directly in your top bar.
 
 ## Features
