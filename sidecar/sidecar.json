@@ -1,9 +1,0 @@
-{
-  "description": "Background worker to sync Antigravity usage to Omarchy",
-  "builtin": "schedule",
-  "args": [
-    "* * * * *",
-    "/bin/bash",
-    "sync.sh"
-  ]
-}
