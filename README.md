@@ -13,9 +13,8 @@ This is a custom Omarchy Shell plugin that pulls your live Antigravity API quota
 ### 1. Install the Plugin
 Omarchy has built-in support for cloning Git repositories as plugins. Simply run:
 ```bash
-omarchy plugin add https://github.com/your-username/antigravity-usage-widget
+omarchy plugin add https://github.com/overclock98/antigravity-usage-widget
 ```
-*(Replace the URL with wherever you pushed this repository)*
 
 ### 2. Enable it
 ```bash
