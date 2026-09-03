@@ -144,7 +144,7 @@ Item {
   }
 
   function updateCommand(kind, agentIds) {
-    return ["bash", root.pluginPath + "/sidecar/sync.sh"]
+    return ["bash", Quickshell.env("HOME") + "/.config/omarchy/plugins/antigravity.usage/sidecar/sync.sh"]
   }
 
   function runUpdate(kind, agentIds) {
