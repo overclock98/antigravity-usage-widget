@@ -123,3 +123,11 @@ for family, fam_limits in families.items():
     os.rename(tmp_path, final_path)
 
 PYEOF
+
+# ── 4. Restore the native local trackers ─────────────────────────────
+# We hijacked the Omarchy UI update timer to run this script.
+# We must now call the original local tracker to ensure Claude Code, Codex, 
+# and Fireworks continue tracking their local usage normally!
+if command -v omarchy-agent-usage-update >/dev/null; then
+  exec omarchy-agent-usage-update "$@"
+fi
