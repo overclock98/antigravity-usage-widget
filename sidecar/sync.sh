@@ -49,7 +49,7 @@ limits = []
 
 for name, info in sorted(models.items()):
     qi = info.get("quotaInfo", {})
-    frac = qi.get("remainingFraction")
+    frac = qi.get("remainingFraction", 0.0)
     display = info.get("displayName", name)
     
     # Strip suffixes like (High), (Low), (Thinking) to group model families together
@@ -58,7 +58,7 @@ for name, info in sorted(models.items()):
     reset_time = qi.get("resetTime")
 
     # Skip internal models, models without quota, or pattern-matched
-    if frac is None or info.get("isInternal"):
+    if info.get("isInternal"):
         continue
     if any(re.search(p, name) for p in SKIP_PATTERNS):
         continue
